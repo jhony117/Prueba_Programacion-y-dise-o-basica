@@ -10,7 +10,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     CommonModule,
     MainComponent,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
   ],
   exports : [
     MainComponent

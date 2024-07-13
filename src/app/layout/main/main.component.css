@@ -1,2 +1,23 @@
 
 
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+section{
+  padding: 4vw;
+}
+
+
+/*
+img{
+
+}
+
+mat-toolbar{
+  /* background-color: aqua;}  */
