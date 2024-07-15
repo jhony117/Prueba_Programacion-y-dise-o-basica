@@ -1,4 +1,4 @@
- 
+
 
  .container{
 
@@ -13,4 +13,21 @@
 
   table{
     width: 100%;
+  }
+
+  .top-buttons{
+
+    width: 100%;
+  }
+.top-buttons > * {
+  float: left;
+}
+
+  .top-buttons > :last-child {
+    margin-right: 1vw;
+    float: inline-end;
+  }
+ 
+  .mat-mdc-button>.mat-icon{
+    margin: 0;
   }

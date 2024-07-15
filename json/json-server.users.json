@@ -1,0 +1,12 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Juan Pérez",
+      "tel": 5551234567,
+      "correo": "juan@example.com",
+      "city": "Los Angeles",
+      "cp": 90001
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 
 
@@ -15,18 +15,27 @@ import { UserTablesComponent } from '../../user-tables/user-tables.component';
   selector: 'app-main',
   standalone: true,
 
+
 imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule,RegisterFormComponent,MappBoxComponent, UserTablesComponent ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
-export class MainComponent {
+export class MainComponent     {
+
+
+
+
+
+  // @ViewChild('img')img? : ElementRef; 
+
+
 
   public page : boolean = true;
 
   showListas(){
-    this.page = true; 
+    this.page = true;
   }
   showRegister() {
-     this.page = false;   
+     this.page = false;
   }
 }

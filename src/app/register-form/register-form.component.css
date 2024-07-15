@@ -6,7 +6,11 @@ span{
     margin: 5em;
 }
 
- 
+form{
+   position: relative;
+   left: 10vw;
+
+}
 
 
- 
+

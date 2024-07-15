@@ -1,6 +1,6 @@
 #mapContainer{
-  
-    
+
+
 
     border-radius: 20px ;
 overflow: hidden;
@@ -10,10 +10,9 @@ height: 36vw;
 }
 mat-form-field {
 
- 
+
     padding: 2em 1em;
 
 }
 
- 
- 
+

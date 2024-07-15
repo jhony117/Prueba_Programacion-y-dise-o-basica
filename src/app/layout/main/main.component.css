@@ -15,37 +15,42 @@
   display: flex;
   min-width: 100%;
 
+
 }
 
 .container > *{
     float: left;
-   
+
+
 }
 .container > :first-child{
- 
+
 margin-right: 48px;
-width: 36vw;
+width: 48vw;
 height: 36vw;
 overflow: auto;
+overflow-x: hidden;
 
 }
 .container > :last-child{
- 
- 
+
+
   width: 40vw;
 
   }
- 
+
 .c{
 
   border: 1px solid black;
 }
 
 
-/*
+
 img{
-
+   z-index: 999;
+   position: relative;
+   top: 24px;
 }
-
+/*
 mat-toolbar{
   /* background-color: aqua;}  */

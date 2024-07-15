@@ -8,18 +8,20 @@ import mapboxgl, {Map, Marker} from 'mapbox-gl';
 
 import { environment } from '../../environments/environment';
 import { MatButtonModule } from '@angular/material/button';
+import { OnlyNumbersDirective } from '../directivas/only-numbers/only-numbers.directive';
+import { StandaloneComponentsModuleModule } from '../standalone-components-module/standalone-components-module.module';
 
 @Component({
   selector: 'app-mapp-box',
   standalone: true,
-  imports: [MatFormFieldModule, ReactiveFormsModule, MatInputModule, MatButtonModule],
+  imports: [MatFormFieldModule, ReactiveFormsModule, MatInputModule, MatButtonModule, StandaloneComponentsModuleModule],
   templateUrl: './mapp-box.component.html',
   styleUrl: './mapp-box.component.css'
 })
 export class MappBoxComponent implements AfterViewInit {
 
 constructor(private fb:FormBuilder) {}
- 
+
 
 
   @ViewChild('map')divMap! : ElementRef;
@@ -30,13 +32,13 @@ constructor(private fb:FormBuilder) {}
     x: ['',Validators.required],
     y: ['',Validators.required],
   });
-  
-  
+
+
 
 
   ngAfterViewInit() {
     if (!this.divMap?.nativeElement) throw 'Map Div not found';
- 
+
 
     mapboxgl.accessToken = environment.mapbox_key;
 
@@ -51,16 +53,16 @@ constructor(private fb:FormBuilder) {}
 
  map.addControl(new mapboxgl.NavigationControl());
 
-   
+
   }
 
   setCordenadas() {
     const cordenadas =  this.cordenadas.getRawValue();
 
       console.log(cordenadas);
-    
-  } 
- 
 
-  
+  }
+
+
+
 }
