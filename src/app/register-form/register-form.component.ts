@@ -28,7 +28,7 @@ import { merge } from 'rxjs';
 export class RegisterFormComponent implements OnInit {
 
   static patternForPostalCode = '/^[0-9]{5}$/';
-
+//todo : obtener dartos obligatoprios desde el servicio
   public form:FormGroup = this.fb.group({ // el priemr arguimento '' es el valor inicial 
     id: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
@@ -41,7 +41,7 @@ export class RegisterFormComponent implements OnInit {
     calle: ['', Validators.required],
     colonia: ['', Validators.required],
     cp: ['', Validators.required, Validators.pattern(/^[0-9]{5}$/)],
-});;
+});
 
 //signals
   errorEmailMessage = signal('');

@@ -9,8 +9,36 @@
   max-width: 600px;
 }
 
-section{
-  padding: 2vw 6vw 2vw;
+.container{
+  position: absolute;
+  padding: 2vw 4vw 2vw;
+  display: flex;
+  min-width: 100%;
+
+}
+
+.container > *{
+    float: left;
+   
+}
+.container > :first-child{
+ 
+margin-right: 48px;
+width: 36vw;
+height: 36vw;
+overflow: auto;
+
+}
+.container > :last-child{
+ 
+ 
+  width: 40vw;
+
+  }
+ 
+.c{
+
+  border: 1px solid black;
 }
 
 
