@@ -5,8 +5,9 @@
 
 
   <div class="example-button-row">
- <a href="" mat-button>Listas</a>
-  <a href="" mat-button>Registro</a>
+ <button mat-button (click)="showListas()">Listas</button>
+  <button mat-button (click)="showRegister()">Registro</button>
+  <img src="/src/assets/logo-itsmarts.png" alt="logo-itsmarts"/>
 
 
   </div>
@@ -14,7 +15,15 @@
 
 
 
-<section>
-  <app-register-form></app-register-form>
-</section>
+<div class="container">
+  @if (page === false) {
+     <app-register-form></app-register-form>
+  } 
+  @if (page === true) {
+    <app-user-tables></app-user-tables>
+  }
+ 
+  <app-mapp-box></app-mapp-box>
+  
+</div>
 

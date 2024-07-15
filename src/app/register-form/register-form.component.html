@@ -1,21 +1,128 @@
 
 
-<div id="main">
+ 
 
   <form [formGroup]="form">
 
-  <mat-form-field appearance="outline">
+        <!--TODO:implement form group  -->
+ 
 
-    <!--TODO:implement form group  -->
+      <mat-form-field appearance="fill" >
+
+        <mat-label>ID Client</mat-label>
+        <input matInput placeholder="" formControlName="id" readonly="true" >
+    
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+
+        <mat-label>Estado</mat-label>
+        <input matInput placeholder="" formControlName="estado" readonly="true">
+        @if (this.form.get('estado')!.invalid) {
+          <mat-error>{{onGenericChanges('estado')}}</mat-error>
+        }
+    
+      </mat-form-field>
 
 
-    <mat-label>outline form field</mat-label>
-    <input matInput placeholder="Placeholder" formControlName="username">
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
+      <br>    <!--    ---------------------------   -->
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>Nombres / Apellidos </mat-label>
+        <input matInput placeholder="" formControlName="name">
+        @if (this.form.get('name')!.invalid) {
+          <mat-error>{{onGenericChanges('name')}}</mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Municipio</mat-label>
+        <input matInput placeholder="" formControlName="city">
+        @if (this.form.get('city')!.invalid) {
+          <mat-error>{{onGenericChanges('city')}}</mat-error>
+        }
+      </mat-form-field>
+      <br> <!--    ---------------------------   -->
+      <mat-form-field appearance="outline">
+
+        <mat-label>Telefono</mat-label>
+        <input matInput placeholder="" formControlName="tel" minlength="10" maxlength="10">
+        @if (this.form.get('tel')!.invalid) {
+          <mat-error>{{onGenericChanges('tel')}}</mat-error>
+        }
+    
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+
+        <mat-label>colonia</mat-label>
+        <input matInput placeholder="" formControlName="colonia">
+        @if (this.form.get('colonia')!.invalid) {
+          <mat-error>{{onGenericChanges('colonia')}}</mat-error>
+        }
+      </mat-form-field>
+
+      
+      <br> <!--    ---------------------------   -->
+      <mat-form-field appearance="outline">
+        <mat-label>Correo</mat-label>
+        <input matInput placeholder="" formControlName="email" email="true">
+        @if (emailControl!.invalid) {
+          <mat-error>{{errorEmailMessage()}}</mat-error>
+        }
+    
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>calle</mat-label>
+        <input matInput placeholder="" formControlName="calle">
+        @if (this.form.get('calle')!.invalid) {
+          <mat-error>{{onGenericChanges('calle')}}</mat-error>
+        }
+    
+      </mat-form-field>
+      <br> <!--    ---------------------------   -->
+      <mat-form-field appearance="fill">
+
+        <mat-label>Fecha de Creacion</mat-label>
+        <input matInput placeholder="" formControlName="createdAt" readonly="createdAt">
+    
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>Codigo Postal</mat-label>
+        <input matInput placeholder="" formControlName="cp" maxlength="5" minlength="5">
+        @if (cpControl!.invalid) {
+          <mat-error>{{errorCpMessage()}}</mat-error>
+        }
+    
+      </mat-form-field>
+      <br><!--    ---------------------------   -->
+      <mat-form-field appearance="outline">
+        <mat-label>Referencia</mat-label>
+        <input matInput placeholder="" formControlName="reference">
+    
+        
+      </mat-form-field>
+      
+     <span>
+      <button mat-button>Aceptar</button>
+   
+     </span>
+     
+     
+     
+    
+
+
+
+  
 
 
  </form>
 
 
-</div>
+
+
+ 
